@@ -1,0 +1,7 @@
+http:
+  cors:
+    origins:
+      - '*'
+    headers:
+      - 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Api-Url,X-Amz-Security-Token'
+    allowCredentials: false

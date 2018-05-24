@@ -1,0 +1,39 @@
+service: my-node-api
+
+plugins:
+  - serverless-google-cloudfunctions
+
+provider:
+  name: google
+  runtime: nodejs
+  project: my-node-api
+  credentials: ~/.gcloud/keyfile.json # this needs to be an absolute path
+  environment:
+    stage: ${opt:stage || 'dev'}
+
+defaults:
+  timeout: 12
+
+package:
+  exclude:
+    - src/**/*
+    - plugins/**/*
+    - dist/src/plugins/**/*
+    - dist/src/routes/**/*
+    - dist/src/app*.*
+    - node_modules/**/*
+    - package.json
+    - tsconfig.json
+  include:
+    - node_modules/cli-table/**/*
+    - node_modules/colors/**/*
+    - node_modules/express/**/*
+    - node_modules/lodash/**/*
+    - node_modules/https/**/*
+    - node_modules/uuid/**/*
+    - dist/src/environments/**
+    - dist/src/helpers/**
+    - dist/src/functions/**
+
+functions:
+  - ${file(./functions/sample/serverless.yml)}

@@ -1,0 +1,84 @@
+{
+  "lintOptions": {
+    "typeCheck": true
+  },
+  "extends": "tslint:all",
+  "rules": {
+    "arrow-parens": false,
+    "ban": [
+      true,
+      ["describe", "only"],
+      ["it", "only"]
+    ],
+    "comment-format": [
+        true,
+        "check-space"
+    ],
+    "completed-docs": false,
+    "cyclomatic-complexity": false,
+    "file-header": [
+      false
+    ],
+    "forin": false,
+    "interface-name": false,
+    "newline-before-return": false,
+    "newline-per-chained-call": false,
+    "no-any": false,
+    "no-console": false,
+    "no-duplicate-imports": false,
+    "no-import-side-effect": false,
+    "no-magic-numbers": false,
+    "no-non-null-assertion": false,
+    "no-null-keyword": false,
+    "no-parameter-properties": false,
+    "no-parameter-reassignment": false,
+    "no-require-imports": false,
+    "no-switch-case-fall-through": true,
+    "no-this-assignment": false,
+    "no-unbound-method": false,
+    "no-unnecessary-qualifier": false,
+    "no-unnecessary-class": false,
+    "no-use-before-declare": false,
+    "no-void-expression": false,
+    "no-unused-variable": false,
+    "max-classes-per-file": false,
+    "max-line-length": [false, 140],
+    "member-access": false,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-before-instance",
+          "variables-before-functions"
+        ]
+      }
+    ],
+    "object-literal-sort-keys": false,
+    "one-variable-per-declaration": false,
+    "only-arrow-functions": [
+        true,
+        "allow-declarations",
+        "allow-named-functions"
+    ],
+    "one-line": false,
+    "ordered-imports": false,
+    "prefer-for-of": false,
+    "prefer-function-over-method": false,
+    "prefer-object-spread": false,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "strict-boolean-expressions": [true, "allow-boolean-or-undefined"],
+    "strict-type-predicates": false,
+    "switch-default": false,
+    "triple-equals": [true, "allow-undefined-check"],
+    "typedef": false,
+    "variable-name": [true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ]
+  }
+}

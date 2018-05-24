@@ -1,0 +1,17 @@
+vars: ${file(../../serverless.vars.yml)}
+
+list:
+  handler: Sample.list
+  events:
+    - http:
+        cors: ${self:vars.http.cors}
+        path: sample/list
+        method: get
+item:
+  handler: Sample.item
+  events:
+    - http:
+        cors: ${self:vars.http.cors}
+        path: sample/{itemId}
+        method: get
+  
